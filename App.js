@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import { Header } from "react-native-elements";
+import { TextInput, Text, View } from "react-native";
+import { Header, Button } from "react-native-elements";
 
 export default class App extends Component {
   render() {
@@ -9,11 +9,28 @@ export default class App extends Component {
         <Header
           centerComponent={{
             text: "YouTube Searcher",
-            style: { color: "white" }
+            style: { color: "white", fontSize: 20 }
           }}
           containerStyle={{ backgroundColor: "#E62117" }}
         />
-        <Text>TEST</Text>
+
+        <View style={{ flexDirection: "row",
+        justifyContent: "space-around",
+        height: 30}}>
+          <TextInput
+            style={{
+              flex: 4,
+              paddingLeft: "3%",
+              backgroundColor: "whitesmoke"
+            }}
+            placeholder="Enter text"
+          />
+          <Button
+            buttonStyle={{ flex: 2, backgroundColor: "darkgray" }}
+            title="Search"
+            onPress={() => console.log("Search button pressed")}
+          />
+        </View>
       </View>
     );
   }
