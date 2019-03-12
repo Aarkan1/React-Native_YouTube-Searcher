@@ -24,7 +24,7 @@ class SearchBar extends Component {
         />
         <Button
           buttonStyle={styles.searchButton}
-          title="Search"
+          title={this.props.loading ? 'Loading' : 'Search'}
           onPress={() => this.props.onPressSearch(this.state.term)}
         />
       </View>
