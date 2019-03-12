@@ -11,7 +11,8 @@ const ListVideos = ({ videos }) => {
     <ScrollView>
       <View style={{
           paddingLeft: 5,
-          paddingRight: 5
+          paddingRight: 5,
+          paddingBottom: 5
       }}>{videoItems}</View>
     </ScrollView>
   );

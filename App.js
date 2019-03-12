@@ -13,6 +13,10 @@ export default class App extends Component {
     videos: []
   };
 
+  componentWillMount(){
+    this.searchYT('pj');
+  }
+
   onPressSearch = value => {
     this.searchYT(value);
   };
@@ -21,7 +25,6 @@ export default class App extends Component {
     // term: term === term (ES6)
     this.setState({ loading: true });
     YTSearch({ key: API_KEY, term }, videos => {
-      console.log(videos);
       this.setState({ loading: false, videos });
     });
   };
