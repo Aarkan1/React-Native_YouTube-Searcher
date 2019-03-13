@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Native-YouTube-Search",
+    "name": "Native YouTube Search",
     "slug": "Native-YouTube-Search",
     "privacy": "public",
     "sdkVersion": "32.0.0",
@@ -23,7 +23,11 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourcompany.yourappname"
+    },
+    "android": {
+      "package": "com.ultradev.youtube_searcher"
     }
   }
 }
